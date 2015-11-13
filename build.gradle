@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+}
+
+jar {
+    baseName = 'gradle-barebones'
+    version = '0.1.0'
+}
+
+task wrapper(type: Wrapper  ) {
+    gradleVersion = '2.4'
+}
